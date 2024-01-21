@@ -12,13 +12,17 @@
 
 #### Section B
 
-_Tuesday/Thursday 2:00 PM – 3:50PM; 370 Jay St Room 308 Loc: Brooklyn Campus_
+_Tuesday/Thursday 2:00 PM – 3:50PM; 
+370 Jay St Room 308 
+Loc: Brooklyn Campus_
 
 ---
 
 #### Section D
 
-_Tuesday/Thursday 4:00 PM – 5:50PM; 370 Jay St Room 308 Loc: Brooklyn Campus_
+_Tuesday/Thursday 4:00 PM – 5:50PM; 
+370 Jay St Room 308 
+Loc: Brooklyn Campus_
 
 ---
 
