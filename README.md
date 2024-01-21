@@ -8,7 +8,7 @@
 
 **DM-UY 2193 Intro to Web Development**
 
-**Fall 2023 – Professor Kathryn Adee**
+**Spring 2024 – Professor Kathryn Adee**
 
 #### Section B
 
