@@ -104,7 +104,7 @@ Class will culminate with final projects. It is expected that these will be both
 
 **Documentation**
 
-IDM coursework documentation using ypur github repo for this class. Please use Markdown files
+IDM coursework documentation using your github repo for this class. Please use Markdown files.
 
 ## Qualitative Grading Overview
 
