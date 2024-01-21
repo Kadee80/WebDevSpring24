@@ -102,7 +102,7 @@ If you miss a class for any reason, it is YOUR RESPONSIBILITY to catch yourself 
 
 Class will culminate with final projects. It is expected that these will be both technology and content driven. The final project will be built over the course of several weeks.
 
-**Documentation**
+**Documentation 5%**
 
 IDM coursework documentation using your github repo for this class. Please use Markdown files.
 
