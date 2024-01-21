@@ -94,7 +94,7 @@ Attendance is _mandatory_. Please inform me via email if you are going to miss a
 
 **PLEASE NOTE: 3 unexcused absences will result in your grade dropping 5%**
 
-This class is in person instruction only. I will not be offering attendance via zoom. If you are sick, traveling for a conference, job interview, or family emergency, please email me ahead of time and request absence accomodations through the proper channels to ensure your absence is excused. If you do not follow this protocol, absences will be marked as unexcused. 
+This class is taught via in person instruction. If a class is to be taught via Zoom, this will be communicated well ahead of time. Zoom attendance is not an option during in person instruction. If you are sick, traveling for a conference, job interview, or family emergency, please email me ahead of time and request absence accomodations through the proper channels to ensure your absence is excused. If you do not follow this protocol, absences will be marked as unexcused. 
 
 If you miss a class for any reason, it is YOUR RESPONSIBILITY to catch yourself up via class notes and in class examples posted in this repository. Office hours are in 20 minute slots, and are for answering questions AFTER you have made an attempt to build something on your own, or require further clarification on a topic. Office hourse are NOT a priviate reteaching of material you missed due to an absence.
 
@@ -135,3 +135,15 @@ Performance and attendance of the student has been such that course requirements
 If you are student with a disability who is requesting accommodations, please contact New York University’s Moses Center for Students with Disabilities at 212-998-980 or mosescsd@nyu.edu. You must be registered with CSD to receive accommodations. Information about the Moses Center can be found atwww.nyu.edu/csd. The Moses Center is located at 726 Broadway on the 2nd floor.
 
 ## Notable Dates
+
+_Feb 4, 2024_- Last day to drop/add on Albert for all students. Last day to drop Spring 2024 classes and not receive a grade of 'W'.
+
+_Feb 9, 2024_ - Presidents Day. No classes scheduled / University Holiday
+
+_March 16 - 24, 2024_ -  SpringBreak, No classes scheduled / University Holiday 
+
+_April 23, 2024_ - Spring 2024 withdrawal deadline. Last day a student can withdraw from the course and receive a W.
+
+_May 6, 2024_ - Last day of Spring Classes
+
+_May 8 -14 , 2024_ - Final Exam Week
