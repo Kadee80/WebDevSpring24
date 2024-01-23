@@ -66,7 +66,7 @@ This course will provide a basic understanding of the methods and techniques of 
 
 Class time will be spent as a combination of lecture, review, and in class exercises. Homework will consist of online tutorials as well as weekly projects that build on each week’s topics of discussion.
 
-It is expected that everyone in the class will create and maintain a blog for their assignments.
+It is expected that everyone in the class will create and maintain a github repo for their assignments.
 
 #### Readings
 
