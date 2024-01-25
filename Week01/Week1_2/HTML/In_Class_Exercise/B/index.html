@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- This is the character set attribute specifies the character
+    encoding got the HTML document. UTF-8 character set coveres almost all oof tyhe characterds
+    and symbols in this world. If you forget this, your fonts (especially custom ones)
+    might not show up properly! -->
+    <meta charset="utf-8" />
+    <!-- The viewport tag sets the initial scale and it ensures proper responsive behavior.
+    We are overriding the browsers default styling.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- The title tag, shows up as the big blue link in search results and in the browser tab -->
+    <title>HTML Elements 101</title>
+  </head>
+  <body>
+    <!-- Everything inside the body tags shows up in the browser window! -->
+    <h1 id="top">
+      Heading 1 is the most important text on the page. There should only be one
+      h1 per page!
+    </h1>
+    <!-- We have h1-h6, these are all more important than regular paragraph text -->
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+    <hr />
+    <!-- Misc text will probably wind up as a p tag. 
+      You can weight certain words or phrases with more importance with em AND strong tags -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit neque,
+      feugiat ac velit id, tempus malesuada lorem. Nullam mollis enim ac nisi
+      lacinia eleifend.
+      <em>Suspendisse sollicitudin libero ut tellus tempor luctus.</em>
+      Proin libero odio, pulvinar cursus lobortis quis, sagittis id diam.
+      Maecenas placerat sapien nec libero rutrum, at aliquet felis pulvinar.
+      Nunc ac odio iaculis, semper ligula sed, gravida quam. Sed nisl est,
+      dignissim finibus porttitor eu, volutpat sed sem.
+      <strong
+        >Vivamus nulla sem, commodo et ante ac, mattis porttitor eros.</strong
+      ><br />
+      Phasellus ut tincidunt lacus, a molestie sem. Etiam non mi tristique,
+      consequat urna vitae, venenatis turpis. Maecenas at erat a sapien pharetra
+      sollicitudin. Nunc ornare mi justo, ac finibus dui sagittis eget. Aliquam
+      porta ut tellus sit amet vulputate. Proin auctor est at ultricies aliquet.
+      Integer tempor mollis dictum.
+    </p>
+    <h2>Buttermilk Pancakes</h2>
+    <p>This is a description of this amazing recipe.</p>
+    <h3>Ingredients</h3>
+    <!-- unordered lists are used for listing items when the exact order is not important -->
+    <ul>
+      <!-- Individual items in an ordered or unordered list need to be in li tags -->
+      <li>1 cup flour</li>
+      <li>1 cup milk</li>
+      <li>1 stick of butter</li>
+      <li>2 tbsp sugar</li>
+      <li>1 egg</li>
+      <li>
+        spices
+        <ul>
+          <li>cinnamon</li>
+          <li>salt</li>
+          <li>nutmeg</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Instructions</h3>
+    <!-- ordered lists care about and display some sort of order notation -->
+    <ol>
+      <li>Combine all ingredients in a bowl. Mix well.</li>
+      <li>Heat pan on medium, melt 1 tbsp butter.</li>
+      <li>Add scoop of batter to the pan.</li>
+      <li>
+        More steps to show a sub-ordered list
+        <ol>
+          <li>count to ten</li>
+          <li>flip the pancake</li>
+          <li>count to ten again...</li>
+        </ol>
+      </li>
+    </ol>
+    <!-- anchor tags are for links to other locations on the same page,
+      other pages on the same site, or other pages on any site! -->
+    <!-- href is the reference to where you are linking to.
+    use target _blank to open the link in a new tab, use _self to open in the same tab
+    if you dont specify a target it will open in the same tab.
+    -->
+    <a href="https://sugarspunrun.com/buttermilk-pancakes/" target="_blank"
+      >Link to a real pancake recipe!</a
+    >
+    <br />
+    <a href="#top">Back to top of page.</a>
+    <br />
+    <img
+      src="https://sugarspunrun.com/wp-content/uploads/2019/03/Best-buttermilk-pancake-recipe-14-of-16.jpg"
+      width="500px"
+      height="500px"
+      alt="Buttermilk pancakes with hot maple syrup!"
+      title="Buttermilk pancakes"
+    />
+    <img
+      src="img/pancakes.jpeg"
+      alt="using an image inside our own sites img folder"
+      width="100px"
+    />
+    <a href="about/index.html">About page link</a>
+    <a href="boilerplate.html">Boilerplate link</a>
+  </body>
+</html>
