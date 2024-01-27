@@ -25,7 +25,7 @@
 
 ### Git, Github, Class Files
 
-- Git is a widely used version control software which we can access via the command line of our computers. First, lets install Git on our computers.
+- Git is a widely used version control software which we can access via the command line of our computers. You most likely have Git installed on your computer, but if for any reason any of the commands in this tutorial tell you to install Git, follow the link below.
 
   - [Install Git](https://github.com/git-guides/install-git)
 
@@ -77,7 +77,7 @@
   Back in Terminal/Command Line. Type
 
   ```
-  git clone https://github.com/Kadee80/WebDevF23.git
+  git clone https://github.com/Kadee80/WebDevSpring24.git
   ```
 
   `git clone` is the git command, the `url` that follows is the link we copied so we could clone this repo.
