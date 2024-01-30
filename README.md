@@ -12,16 +12,16 @@
 
 #### Section B
 
-_Tuesday/Thursday 2:00 PM – 3:50PM; 
-370 Jay St Room 308 
+_Tuesday/Thursday 2:00 PM – 3:50PM;
+370 Jay St Room 308
 Loc: Brooklyn Campus_
 
 ---
 
 #### Section D
 
-_Tuesday/Thursday 4:00 PM – 5:50PM; 
-370 Jay St Room 308 
+_Tuesday/Thursday 4:00 PM – 5:50PM;
+370 Jay St Room 308
 Loc: Brooklyn Campus_
 
 ---
@@ -94,7 +94,7 @@ Attendance is _mandatory_. Please inform me via email if you are going to miss a
 
 **PLEASE NOTE: 3 unexcused absences will result in your grade dropping 5%**
 
-This class is taught via in person instruction. If a class is to be taught via Zoom, this will be communicated well ahead of time. Zoom attendance is not an option during in person instruction. If you are sick, traveling for a conference, job interview, or family emergency, please email me ahead of time and request absence accomodations through the proper channels to ensure your absence is excused. If you do not follow this protocol, absences will be marked as unexcused. 
+This class is taught via in person instruction. If a class is to be taught via Zoom, this will be communicated well ahead of time. Zoom attendance is not an option during in person instruction. If you are sick, traveling for a conference, job interview, or family emergency, please email me ahead of time and request absence accomodations through the proper channels to ensure your absence is excused. If you do not follow this protocol, absences will be marked as unexcused.
 
 If you miss a class for any reason, it is YOUR RESPONSIBILITY to catch yourself up via class notes and in class examples posted in this repository. Office hours are in 20 minute slots, and are for answering questions AFTER you have made an attempt to build something on your own, or require further clarification on a topic. Office hourse are NOT a priviate reteaching of material you missed due to an absence.
 
@@ -140,7 +140,7 @@ _Feb 4, 2024_- Last day to drop/add on Albert for all students. Last day to drop
 
 _Feb 9, 2024_ - Presidents Day. No classes scheduled / University Holiday
 
-_March 16 - 24, 2024_ -  SpringBreak, No classes scheduled / University Holiday 
+_March 16 - 24, 2024_ - SpringBreak, No classes scheduled / University Holiday
 
 _April 23, 2024_ - Spring 2024 withdrawal deadline. Last day a student can withdraw from the course and receive a W.
 
