@@ -3,7 +3,102 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTML Form Elements</title>
+    <title>HTML Forms and Inputs</title>
   </head>
-  <body></body>
+  <body>
+    <p>
+      Here is a form containing basic input types. For more information see
+      <a href="https://www.w3schools.com/html/html_forms.asp" target="_blank"
+        >W3 Schools.</a
+      >
+    </p>
+    <!-- The form action usually contains a file to process the form data,
+    it could be local like contact.php,
+    or it could be to a third party API. The action is what we want to do with the form data -->
+    <form action="#" method="POST" name="sampleForm" target="_self">
+      <fieldset>
+        <legend>Simple Text Input</legend>
+        <!-- https://www.w3schools.com/html/html_form_attributes.asp
+          peep all of the available attributes for different form input types -->
+        <p>
+          The box and title are created by using the fieldset and legend tags.
+        </p>
+        <label for="FirstName">First Name</label>
+        <input name="FirstName" type="text" required />
+        <p>This text input has a max character length and placeholder text.</p>
+        <label for="LastName">Last Name</label>
+        <input
+          name="LastName"
+          type="text"
+          placeholder="Last Name"
+          maxlength="15"
+        />
+        <label for="age">Your age:</label>
+        <input name="age" type="number" min="0" max="100" />
+
+        <label for="password">Choose a password</label>
+        <input name="password" type="password" />
+      </fieldset>
+      <fieldset>
+        <legend>Textarea Tag</legend>
+        <p>
+          Text area tags are great for longer text answers, like sentences or
+          paragraphs.
+        </p>
+        <label for="WhyIDM">Why did you apply to IDM?</label>
+        <textarea name="WhyIDM" cols="50" rows="10"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Check Boxes</legend>
+        <p>
+          Check boxes allow the user to select more than one option at once.
+          Checkboxes in the same group have the same name, but different values!
+        </p>
+        <label for="Pet">What pets do you have?</label>
+        <br />
+        <input type="checkbox" name="Pet" value="Dog" /> Dog
+        <br />
+        <input type="checkbox" name="Pet" value="Cat" /> Cat
+        <br />
+        <input type="checkbox" name="Pet" value="Chicken" /> Chicken
+        <br />
+        <input type="checkbox" name="Pet" value="Snake" /> Snake
+      </fieldset>
+      <fieldset>
+        <legend>Radio Buttons</legend>
+        <p>
+          Radio Buttons only allows the user to select one option per group.
+          Radio Buttons in the same group have the same name, but different
+          values!
+        </p>
+        <label for="Pet">What pets is your favorite?</label>
+        <br />
+        <input type="radio" name="Pet" value="Dog" /> Dog
+        <br />
+        <input type="radio" name="Pet" value="Cat" /> Cat
+        <br />
+        <input type="radio" name="Pet" value="Chicken" /> Chicken
+        <br />
+        <input type="radio" name="Pet" value="Snake" /> Snake
+      </fieldset>
+      <fieldset>
+        <legend>Select Options</legend>
+        <p>
+          Using the select and option tags, you can add items to a dropdown
+          menu.
+        </p>
+        <label for="State">Pick a State!</label>
+        <br />
+        <select name="State">
+          <option value="NH">New Hampshire</option>
+          <option value="NY">New York</option>
+          <option value="NM">New Mexico</option>
+          <option value="NJ">New Jersey</option>
+        </select>
+      </fieldset>
+      <p>Finally, we use a button to submit our form</p>
+      <input name="Submit" value="Contact" type="button" disabled />
+      <button role="button">Contact Us!</button>
+    </form>
+  </body>
 </html>
