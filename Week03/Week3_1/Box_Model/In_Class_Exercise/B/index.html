@@ -3,7 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Box Model w/ Inline-Block</title>
+    <title>Simple Navbar</title>
+    <!-- link to google fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Handlee&display=swap"
+      rel="stylesheet"
+    /> -->
+    <!-- internal style sheet (only applies to this page/file) -->
+    <style type="text/CSS">
+      @import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Handlee', cursive;
+      }
+
+      ul {
+        /* remove all bullet points */
+        list-style-type: none;
+        overflow: hidden;
+        background-color: cornflowerblue;
+        /*
+        make the parent elements font size zero when using inline block
+        to get rid of the tiny annoying space between letters (because inline is usually for text) 
+        */
+        font-size: 0;
+      }
+
+      li {
+        /* li display BLOCK by default, they dont want to share horizontal space with any other elements
+        we are making LI display inline-block which gives us the benefits of both block and inline
+        */
+        display: inline-block;
+        font-size: 1rem;
+        /* width: 200px; */
+      }
+      /* descendant selector is looking for this pattern */
+      li a {
+        display: block;
+        text-align: center;
+        /* make it a big chunky clickable area, not just the text itself */
+        width: 100px;
+        padding: 10px;
+        /* remove the default a tag styling */
+        text-decoration: none;
+        /* change the link color */
+        color: chartreuse;
+      }
+      /* highlight the active page in menu */
+      li a.active {
+        background-color: dodgerblue;
+      }
+
+      li a:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+        color: #fff;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a class="active" href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
