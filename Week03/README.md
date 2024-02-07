@@ -1,6 +1,4 @@
-# HW Week03 Due Tuesday Week04
-
-# HW - Due Monday, Week 4
+# HW - Due Tuesday, Week 4
 
 By now we should have gotten the hang of some simple git and GitHub terminal commands. By Tuesday of next week, be sure to have posted folders with all HW assignments to this point to your HW repository. For example, HW assigned Week01 should be posted to a Week01/ folder in your repo.
 
