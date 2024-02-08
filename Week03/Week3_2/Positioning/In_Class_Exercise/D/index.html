@@ -4,6 +4,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Positioning Basics</title>
+    <!-- external style sheet -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- if we had an internal style set here, they would override our external styles -->
+    <!-- <style></style> -->
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1>Maybe this couls be a fixed nav bar?</h1>
+    </header>
+    <div class="abs-no-parent">
+      <p>This div has no parent and is absolutely positioned</p>
+    </div>
+    <div class="rel-parent">
+      <p>This div is a relatively positioned parent</p>
+      <div class="abs-rel-parent">
+        <p>
+          This div is absolutely positioned inside of a relatively positioned
+          parent
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
