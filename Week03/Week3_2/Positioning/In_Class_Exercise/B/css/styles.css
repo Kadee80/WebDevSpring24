@@ -1,0 +1,45 @@
+html,
+body {
+  margin: 0;
+}
+
+div {
+  border: 1px solid red;
+  padding: 10px;
+}
+/* Absolute positioned elements without a
+positioned parent will be positioned in relation to
+the entire browser window */
+.abs-no-parent {
+  background-color: cornflowerblue;
+  position: absolute;
+  top: 20%;
+  right: 100px;
+}
+
+.rel-parent {
+  background-color: blueviolet;
+  width: 50%;
+  /* percentage of viewport height */
+  height: 100vh;
+  /* whenevever you want to position something absolutely inside of another element, the parent element needs to be positioned relative; */
+  position: relative;
+}
+
+.abs-rel-parent {
+  background-color: rgb(12, 237, 16);
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+header {
+  background-color: darkorange;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  /* think of adjusting z index like adjusting draw order */
+  z-index: 100;
+}
