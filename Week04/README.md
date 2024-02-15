@@ -6,7 +6,8 @@ Time to start thinking about your midterm project! You will be presenting next w
 - an existing website you drew inspiration from (bonus points for pinterest collection or mood board)
 - concepts|skills we have covered that you will use to build your site
 - concepts|skills you need to still learn to complete the project
-- _turn your wireframes + layout into HTML CSS_
+- wireframe/sitemap
+- _ next week you will turn your wireframes + layout into HTML CSS_
 
 ### Here are a few useful resources to help with inspiration:
 
