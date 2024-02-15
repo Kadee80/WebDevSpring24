@@ -7,7 +7,7 @@ Time to start thinking about your midterm project! You will be presenting next w
 - concepts|skills we have covered that you will use to build your site
 - concepts|skills you need to still learn to complete the project
 - wireframe/sitemap
-- _ next week you will turn your wireframes + layout into HTML CSS_
+- Once you get the OK from me, start turning those wireframes into HTML and CSS!
 
 ### Here are a few useful resources to help with inspiration:
 
