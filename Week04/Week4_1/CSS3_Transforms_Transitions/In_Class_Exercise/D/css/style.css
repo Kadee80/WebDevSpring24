@@ -16,9 +16,68 @@ body {
   font-family: 'Kaushan Script', cursive;
 }
 
+/* NAVIGATION */
+
+header {
+  width: 80%;
+  padding: 0 10%;
+  height: 50px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: grey;
+  /*flexbox container properties */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: url('../img/tweed.png');
+}
+
+header h1 {
+  color: #ccc;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  text-align: center;
+  background-color: rgba(40, 40, 40, 0.1);
+}
+
+nav li {
+  font-size: 18px;
+  height: 50px;
+  line-height: 50px;
+  width: 120px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #aaa;
+  display: block;
+  /* transitions are always defined at the starting/loading state style */
+  transition: all 1s;
+}
+
+nav a:hover {
+  background-color: rgba(40, 40, 40, 0.5);
+  color: #fff;
+}
+
+nav a.active {
+  background-color: black;
+  color: white;
+}
+
+/* DEFAULT GALLERY STYLES */
+
 .container {
   width: 900px;
   margin: 0 auto;
+  margin-top: 100px;
   font-size: 0;
 }
 
@@ -43,4 +102,82 @@ body {
   width: 280px;
   color: #333;
   font-size: 1rem;
+}
+
+/* Transforms and Transitions */
+
+.scaleUp {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+.scaleX {
+  transform: scale(2, 1);
+}
+
+.scaleY {
+  transform: scale(1, 2);
+}
+
+.skewX {
+  transform: skewX(-20deg);
+}
+
+.skewY {
+  transform: skewY(-20deg);
+}
+
+.skewBoth {
+  transform: skew(10deg, 30deg);
+}
+
+.rotX {
+  transform: rotateX(120deg);
+}
+
+.rotY {
+  transform: rotateY(120deg);
+}
+
+.rotZ {
+  transform: rotateZ(120deg);
+}
+
+.rotateLeft {
+  transform: rotate(-20deg);
+  transition: all 5s ease-in-out;
+}
+
+.rotateLeft:hover {
+  transform: rotate(20deg);
+  cursor: pointer;
+}
+
+.skewHover {
+  transform: skewX(30deg);
+  transition: all 5s ease;
+}
+
+.skewHover:hover {
+  transform: skewX(-30deg);
+  cursor: pointer;
+}
+
+.scaleHover {
+  transform: scale(1.5);
+  transition: all 10s ease-in;
+}
+
+.scaleHover:hover {
+  transform: scale(0.5);
+}
+
+.colorSwap {
+  filter: grayscale(100%) blur(5px);
+
+  transition: all 5s ease-out;
+}
+
+.colorSwap:hover {
+  filter: grayscale(0) blur(0px);
 }
