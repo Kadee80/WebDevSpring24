@@ -1,13 +1,13 @@
 # HW - Due Tuesday, Week 5
 
-Time to start thinking about your midterm project! You will be presenting next week a proposal along with your layout in class.
+Time to start thinking about your midterm project! You will be presenting next week a proposal along with your layout in class THURSDAY. 
 
 - concept|theme of the site (not just random images and links that show skill)
 - an existing website you drew inspiration from (bonus points for pinterest collection or mood board)
 - concepts|skills we have covered that you will use to build your site
 - concepts|skills you need to still learn to complete the project
 - wireframe/sitemap
-- Once you get the OK from me, start turning those wireframes into HTML and CSS!
+- _Once you get the OK from me, start turning those wireframes into HTML and CSS!_
 
 ### Here are a few useful resources to help with inspiration:
 
