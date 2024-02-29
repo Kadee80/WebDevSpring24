@@ -18,7 +18,36 @@ Importance relates to the source of a style sheet:
 
 These sources are processed in order.
 
+### Inheritance
+
+Inheritance is how property values propagate from parent to child elements
+
+For example: A font style applied to the `<body>` tag, will cause that same font to be applied to all other elements on the page, unless specified differently.
+
+Not all properties are inherited.
+
+Inheritance can be forced using the inherit keyword font-family: inherit;
+
+### Pseudo-Elements
+
+A pseudo-element is used to apply a style to a part of an element
+
+`p::first-line` The first line of a paragraph
+
+`li::marker` The marker before a list item
+
+`.clearfix::before` Content inserted before the element with the class clear fix
+
+`.clearfix::after` Content inserted after the element with the class clear fix
+
+### Pseudo-Classes
+
+Pseudo-classes define the special state of an element
+
+They are commonly used with anchor tags:
 This is a difficult concept at first. It becomes even more important and convoluted when compiling SASS (later this semester).
+
+## Specificty
 
 Every CSS rule has a weight:
 
@@ -49,33 +78,7 @@ _If 2 rules have the same weight, the last one processed wins!_
 
 _Seriously. Don’t get more specific than you need to!_
 
-### Inheritance
 
-Inheritance is how property values propagate from parent to child elements
-
-For example: A font style applied to the `<body>` tag, will cause that same font to be applied to all other elements on the page, unless specified differently.
-
-Not all properties are inherited.
-
-Inheritance can be forced using the inherit keyword font-family: inherit;
-
-### Pseudo-Elements
-
-A pseudo-element is used to apply a style to a part of an element
-
-`p::first-line` The first line of a paragraph
-
-`li::marker` The marker before a list item
-
-`.clearfix::before` Content inserted before the element with the class clear fix
-
-`.clearfix::after` Content inserted after the element with the class clear fix
-
-### Pseudo-Classes
-
-Pseudo-classes define the special state of an element
-
-They are commonly used with anchor tags:
 
 - `a:link` (unvisited link)
 - `a:hover` (mouseover)
