@@ -4,6 +4,86 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JS Data Types P1</title>
+    <style type="text/css">
+      /*  */
+    </style>
+    <script type="text/javascript">
+      // declare a variable
+      var myVar
+      // assign a value to a variable
+      myVar = 'number'
+      // decalre and assign in the same line
+      var otherVar = 24
+      console.log(myVar)
+      console.log(typeof myVar)
+      console.log(typeof otherVar)
+      // reassign a new value to myVar which new type
+      myVar = true
+      console.log(myVar)
+      console.log(typeof myVar)
+      // its concatinating number 4 and a string 416
+      console.log(4 + '16') //416
+      //  WHAT?!!? why does the following line work? Becuase JS parsed the integer from the string and performed math
+      console.log(4 * '16') // 64
+      // This is what would happen in any other language. You cannot perform math between a string and an int
+      console.log(6 * 'four') //NaN
+
+      var temp = 78
+      // this is how we insert variables between strings
+      var message = "Today's temperature is " + temp + ' degrees F.'
+      console.log(message)
+
+      // declare and define a function
+      function printMessage() {
+        console.log('Hello World')
+      }
+      // call/execute a function
+      printMessage()
+      var sum
+      // a function with arguments/parameters
+      function sumVals(a, b) {
+        // whatever is written between the {} is our function
+        // any variables declared/assigned between {} live and die within this function
+        sum = a + b
+        alert(sum)
+      }
+      // calling sumVals function with 2 arguments
+      // sumVals(345, 678)
+      // sum = 1023
+      console.log(sum)
+
+      // booleans and conditionals
+      var isOn = true
+      // toggle between on and off
+      function switchOnOff() {
+        if (isOn === true) {
+          alert('isOn is currently true. Switching to false now...')
+          isOn = false
+        } else {
+          alert('isOn is currently false. Switching to true now...')
+          isOn = true
+        }
+      }
+
+      // loops and increments
+      // i++ is shorthand for i=i+1
+      // i-- is shorthand for i=i-1
+      // i+=5 is shorthand for i=i+5
+
+      // BEWARE OF INFINITE LOOPS IN ANY LANGUAGE
+      // your statement needs to always evaluate to false eventually
+
+      function countToN(n) {
+        // for loop
+        for (var i = 0; i <= n; i++) {
+          console.log(i)
+        }
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <button onclick="sumVals(45,98)">Call sum Values function</button>
+    <button onclick="switchOnOff()">Toggle On/Off</button>
+    <button onclick="countToN(90)">Count to 10</button>
+  </body>
 </html>

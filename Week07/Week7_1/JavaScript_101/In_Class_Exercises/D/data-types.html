@@ -4,6 +4,77 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JS Data Types P1</title>
+    <style type="text/css">
+      /*  */
+    </style>
+
+    <script type="text/javascript">
+      // declare a variable
+      var myVar
+      // assigning a value to a variable
+      myVar = 'number'
+      // declare and assign a value in one line
+      var otherVar = 24
+      // reassign values at any time, AND new type of value
+      otherVar = 'twenty four'
+
+      console.log(myVar)
+      console.log(typeof myVar)
+
+      var x = 15
+      var y = '3'
+      var z = 'three'
+
+      console.log(x + y)
+      console.log(x * y)
+      console.log(x * z)
+
+      // variables and string mixed
+      var temp = 52
+      var message = "Today's temperature is " + temp + ' degrees F.'
+      console.log(message)
+
+      // functions parameters and the onclick attribute
+      function sumValues(a, b) {
+        // variables DECLARED inside {} live and die inside {} this is called scope
+        var sum = a + b
+        alert(sum)
+      }
+      // call a function inside your code
+      sumValues(123, 456)
+      // error thrown decause var sum is scoped within sumValues
+      // console.log(sum)
+
+      // booleans and conditionals
+      var isOn = true
+      // toggle between on and off
+      function switchOnOff() {
+        if (isOn === true) {
+          alert('isOn is currently TRUE. switching to FALSE')
+          isOn = false
+        } else {
+          alert('isOn is currently FALSE. switching to TRUE')
+          isOn = true
+        }
+      }
+
+      // loops and increments
+      // i++ is shorthand for i = i+1
+      // i-- is shorthand for i = i-1
+      // i+=5 is shorthand for i = i+5
+
+      // BEWARE OF INFINITE LOOPS. YOUR CONDITION MUST EVALUATE TO FALSE EVENTUALLY
+      function countToN(n) {
+        // for loop
+        for (var i = 10; i <= n; i += 5) {
+          console.log(i)
+        }
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <!-- call a function on click -->
+    <button onclick="switchOnOff()">Toggle ON/OFF</button>
+    <button onclick="countToN(45)">Count to 45</button>
+  </body>
 </html>

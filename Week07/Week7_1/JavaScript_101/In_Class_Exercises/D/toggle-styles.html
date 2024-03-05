@@ -4,6 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Toggle Styles</title>
+    <style>
+      .active {
+        background-color: #006fff;
+        color: white;
+        font-size: 60px;
+      }
+    </style>
+    <script type="text/javascript">
+      function toggleActive() {
+        // grab the element to change
+        var element = document.getElementById('changeMe')
+        // console.log(element)
+        // check and see if the element has the class active, if so remove it
+        if (element.classList.contains('active')) {
+          element.classList.remove('active')
+          element.innerHTML = 'I am not active anymore!'
+        } else {
+          element.classList.add('active')
+          element.innerHTML = 'Woo hoo! I am active!'
+        }
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1 id="changeMe" onclick="toggleActive()">
+      This is a heading. Click me to change my CSS and HTML content!
+    </h1>
+    <button onclick="toggleActive()">change the other element stuff</button>
+  </body>
 </html>
