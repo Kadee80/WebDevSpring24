@@ -4,6 +4,55 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Dynamic DOM, 2 ways</title>
+    <style type="text/css">
+      #content {
+        color: red;
+      }
+
+      @media screen and (max-width: 767px) {
+        #content {
+          color: blue;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <button onclick="addSingleP()">Add a single P using strings</button>
+    <button onclick="addMultiP(9)">
+      Add multiple Ps the right way using DOM nodes
+    </button>
+    <div id="content">
+      <p>This is some dummy text that will be overwritten by innerHTML.</p>
+    </div>
+    <!-- Loading the script tag after our HTML content is a hacky workaround
+      for making sure our HTML elements exist before we try and store/manipulate them via JS -->
+    <script type="text/javascript">
+      // declare our content variable globally so that we can access it anywhere within ou script tag.
+      var content
+      // we can assign it later in our code
+      content = document.getElementById('content')
+      // console.log(content)
+
+      function addSingleP() {
+        content.innerHTML =
+          '<p>This is a poorly instantiated p using string trickery.</p>'
+      }
+
+      function addMultiP(num) {
+        // var num = 9
+        for (var i = 0; i < num; i++) {
+          // create a p element (node)
+          var p = document.createElement('P')
+          // create a text node to go inside
+          var text = document.createTextNode(
+            'This is paragraph number ' + (i + 1) + ' inserted with nodes.'
+          )
+          // append the text node to the p node
+          p.appendChild(text)
+          // append the p node to the html doc
+          content.appendChild(p)
+        }
+      }
+    </script>
+  </body>
 </html>

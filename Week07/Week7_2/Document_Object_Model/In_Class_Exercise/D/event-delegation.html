@@ -4,6 +4,62 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Event Listeners and Delegation</title>
+    <style type="text/css">
+      img {
+        display: block;
+      }
+      .hidden {
+        display: none;
+      }
+      .active {
+        color: red;
+        text-shadow: 2, 2, 2, 2 rgba(0, 0, 0, 0.4);
+      }
+    </style>
+    <script type="text/javascript">
+      // make our hidebtn globally available as a var
+      var hideBtn
+      // wait for the DOM to be loaded before executing certain lines of code, for example, assigning element to variables
+      // in this example the callback function is anonymous, aka we call a function here
+      // and it happens and we never need to call it anywhere else so why name it?
+      // DOMContentLoaded is where we put all of the code we want to fire once the page has finished loading
+      document.addEventListener('DOMContentLoaded', function () {
+        console.log('locked and loaded!')
+        // this is usually where we assign elements to variables, or where we add event listeners
+        hideBtn = document.getElementById('hideBtn')
+        hideBtn.addEventListener('click', toggleVisible)
+
+        document
+          .getElementById('eventH1')
+          .addEventListener('mouseover', function (event) {
+            // peep the event object that was passed in to our anonymous callback function
+            console.log(event.target)
+            // store the event target (aka the one the event just happened to)
+            var el = event.target
+            el.classList.toggle('active')
+          })
+      })
+
+      function toggleVisible() {
+        var peep = document.getElementById('chicken')
+        peep.classList.toggle('hidden')
+
+        if (peep.classList.contains('hidden')) {
+          hideBtn.innerHTML = 'Show'
+        } else {
+          hideBtn.innerHTML = 'Hide'
+        }
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1 id="eventH1">
+      This H1 is here to be moused over so we can see that event object.
+    </h1>
+    <button id="hideBtn">Hide</button>
+    <img
+      id="chicken"
+      src="https://static.wixstatic.com/media/bb9498_c91d61409f4d4c65ada21017533d1ce8~mv2.jpg/v1/fill/w_980,h_911,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/bb9498_c91d61409f4d4c65ada21017533d1ce8~mv2.jpg"
+    />
+  </body>
 </html>
