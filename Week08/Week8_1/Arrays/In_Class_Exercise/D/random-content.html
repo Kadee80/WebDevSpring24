@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Random Content</title>
+    <script type="text/javascript">
+      // make an array of img srcs to choose from at random when the page loads
+      var arrImg = [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hausziege_04.jpg/440px-Hausziege_04.jpg',
+        'https://nationalzoo.si.edu/sites/default/files/styles/wide/public/paragraphs/single_image/20180628-634sb.jpg?itok=ox7HF_H4',
+        'https://maymont.org/wp-content/uploads/2020/07/banner-goat-c-Carla-Murray-1400x934.jpg',
+      ]
+      // make an array of links that correspond to the images shown
+      var arrLinks = [
+        'https://en.wikipedia.org/wiki/Goat',
+        'https://nationalzoo.si.edu/animals/goat',
+        'https://maymont.org/explore/animals/maymont-farm/goats/',
+      ]
+      // helper function for picking a random number in the range of our array length
+      function randomIndex(max) {
+        return Math.floor(Math.random() * max)
+      }
+      // we can write our pick some random content function here,
+      // but we shouldnt try and call it until our DOM has loaded
+      function loadRandomImage() {
+        // pick a random index in the range of our array length
+        var index = randomIndex(arrImg.length)
+        // assigned our img and link element as variables
+        var img = document.getElementById('goat')
+        var link = document.getElementById('dynLink')
+        // using dot notation, we can access and assign values to different attributes of our elements
+        img.src = arrImg[index]
+        link.href = arrLinks[index]
+      }
+
+      // bring it all together with an event listener
+      // document.addEventListener('DOMContentLoaded', function () {
+      //   // assign elements to global variabled here
+      //   // add event listeners to different elements on the page
+      //   // call any functions i want to fire when the page initially loads
+      //   loadRandomImage()
+      // })
+
+      document.addEventListener('DOMContentLoaded', loadRandomImage)
+    </script>
+  </head>
+  <body>
+    <a href="#" id="dynLink" target="_blank"><img src="" id="goat" /></a>
+  </body>
+</html>

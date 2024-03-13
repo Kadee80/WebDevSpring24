@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Intro to Arrays</title>
+    <script type="text/javascript">
+      // declare a variable called months
+      var months
+      console.log(months)
+      // assign it an empty array as its value
+      months = []
+      console.log(months)
+      // populate the array and take a look at its contents and properties
+      months = ['January', 'February', 'March', 'April', 'May', 'June']
+      // we access the length property of any array using dot notation
+      console.log(months.length)
+
+      // remove the last month in our array from our array and assign it to another variable
+      var lastMonth = months.pop()
+      console.log(months)
+      console.log(months.length)
+      console.log('We just removed: ' + lastMonth)
+
+      // how would we log the 2nd month in our array?
+      console.log(months[1])
+
+      // Add june back into our calendar/array using push(). Push always adds to the END of an array
+      months.push(lastMonth)
+      months.push('July')
+      console.log(months)
+
+      // use a loop to list our all values in our months array
+      for (var i = 0; i < months.length; i++) {
+        console.log(i, months[i])
+      }
+
+      // loop through the months backwards and delete each item one by one
+      // why backwards? because pop() removes the LAST item always
+      // for (var i = months.length; i > 0; i--) {
+      //   // pass the deleted item into a temporary variable called dm
+      //   var dm = months.pop()
+      //   console.log(
+      //     'Deleted ' + dm + ' the new array length is ' + months.length
+      //   )
+      // }
+
+      // return undefined becuase our array is empty because of the previous loop
+      // console.log(months[3])
+
+      // pick a random number between 0 and our array's length and access that slot in our array
+      var rn = Math.floor(Math.random() * months.length)
+      console.log(months[rn])
+    </script>
+  </head>
+  <body></body>
+</html>
