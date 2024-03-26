@@ -4,6 +4,89 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>User Input Simple</title>
+    <style>
+      h1 {
+        text-transform: uppercase;
+      }
+
+      /* classes to change the color with js */
+      .red {
+        color: red;
+      }
+
+      .green {
+        color: #00ff00;
+      }
+
+      .blue {
+        color: rgba(0, 0, 200, 0.7);
+      }
+
+      .purple {
+        color: rgb(200, 0, 255);
+      }
+    </style>
+    <script>
+      // a functiopn that changes the color of the H1 based on what number the user picks
+
+      // first thing we need is an event listener to make sure the dom content is loaded
+
+      document.addEventListener('DOMContentLoaded', function () {
+        let myBtn = document.getElementById('changeBtn')
+        console.log(myBtn.classList)
+
+        // now that the DOm is loaded we can add our event listeners
+        // TODO
+        // Make the anonymoud function a named function,
+        // how would you add that named function to the following event listener?
+        myBtn.addEventListener('click', changeClass)
+      })
+
+      function changeClass() {
+        // grab the user input and store it
+        let userN = document.getElementById('num')
+        // oh snap it look like a number but its type string
+        console.log(typeof userN.value)
+        // but we dont a string
+        let n = parseInt(userN.value)
+        console.log(typeof n)
+
+        // grab grab our h1 so we can change it in our switch statement
+        var h = document.getElementById('changeMe')
+
+        // rather than having a list of conditionals, lets take a look at switch statements
+        switch (n) {
+          case 0:
+            h.className = 'red'
+            // you can have a bunch of lines of code, but always end the condition with break
+            break
+          case 1:
+            h.className = 'green'
+            break
+          case 2:
+            h.className = 'blue'
+            break
+          case 3:
+            h.className = 'purple'
+            break
+          default:
+            // the default case is always needed incase none of the above are true
+            break
+        }
+      }
+    </script>
   </head>
-  <body></body>
+  <body>
+    <h1 id="changeMe">Get user input</h1>
+    <form>
+      <fieldset>
+        <legend>Pick a number between 0 and 3</legend>
+        <!-- input that only accepts numbers between 0-3 and increments by 1(whole numbers) -->
+        <input type="number" name="num" id="num" min="0" max="3" step="1" />
+        <button type="button" id="changeBtn" class="btnClass" onclick="">
+          Click to change color class of the H1
+        </button>
+      </fieldset>
+    </form>
+  </body>
 </html>
