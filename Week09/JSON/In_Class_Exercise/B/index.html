@@ -4,6 +4,34 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>JSON</title>
+    <script>
+      let customer = {
+        firstName: 'Tony',
+        lastName: 'Pony',
+        pets: ['dog', 'cat', 'iguana'],
+      }
+
+      let pets = ['dog', 'cat', 'iguana']
+
+      // access the customers first name property with dot notation
+      console.log(customer.firstName)
+      // how would log the customers last name?
+      console.log(customer.lastName)
+      // tony's second pet?
+      console.log(customer.pets[1])
+      // what if we wanted to log all of tony's pets?
+      for (var i = 0; i < customer.pets.length; i++) {
+        console.log(customer.pets[i])
+      }
+
+      console.log(customer)
+      // we can add new properties to an existing object using dot notation
+      customer.age = 45
+      customer.isMarried = false
+      console.log(customer)
+      customer.isMarried = true
+      console.log(customer)
+    </script>
   </head>
   <body></body>
 </html>
