@@ -250,7 +250,7 @@ _Note: the object you wish to convert to JSON is passed to JSON.stringify() meth
 
 ### In Class Exercises
 
-Let’s take a look at some quick examples in VSCode. Once we have our API results stored as global variables we can format and display some information to the user with Template Strings and/or HTML Elements.
+Let’s take a look at some quick examples in VSCode. Once we have our API results stored as global variables we can format and display some information to the user with Template Strings.
 
 1- Using the random inspirational quote API endpoint. Display an inspirational quote, and the authors name to the user. (google font usage encouraged)
 
@@ -261,7 +261,7 @@ Let’s take a look at some quick examples in VSCode. Once we have our API resul
 - Mailing Address
 - Any other information you’d like to display from the returned JSON
 
-3- Make a helper function to generate a random INTEGER between 1-100. Use that random integer in the API endpoint to grab a random Rick and Morty character. Use the result to generate a character card with the following stats:
+3- Make a helper function to generate a [random INTEGER between 1-100](https://github.com/Kadee80/WebDevSpring24/blob/main/Week08/Week8_1/Math/In_Class_Exercise/B/index.html#L83). Use that random integer in the API endpoint to grab a random Rick and Morty character. Use the result to generate a character card with the following stats:
 
 - Name
 - Photo
