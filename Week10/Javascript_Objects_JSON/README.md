@@ -197,7 +197,7 @@ Javascript wants to execute our code, line by line, as quickly as it can read it
 
 This is why we need to wrap certain variable assignments within the event listener `DOMContentLoaded`. Without it, JS will wind up with a bunch of `null` or `undefined` variables due to the fact that the HTML may not have fully loaded by the time JS attempts to ‘grab’ it.
 
-API results are usually pretty quick, but they are not INSTANT. Even if it takes a few milliseconds to complete, JS will have moved on and left our named result variables `undefined`.
+API results are usually pretty quick, but they are not INSTANT. Even if it takes a few milliseconds to complete, JS will have moved on and left our named result variables as an unresolved `Promise`.
 
 We need to tell Javascript to chill out, and wait for the API to return a result (even if that result is an error) before continuing along with the following lines of code.
 
