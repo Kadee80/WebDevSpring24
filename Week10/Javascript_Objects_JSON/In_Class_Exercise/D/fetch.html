@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fetching Data from API Endpoint</title>
+    <script type="text/javascript">
+      function randNumRange(min, max) {
+        var rn = Math.round(Math.random() * (max - min) + min)
+        // return a value from our function
+        return rn
+      }
+
+      // using JS fetch API
+      // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+
+      // we need to flag this function as asynchronous
+      // whenever we use the await flag within the function
+      async function logApiResults() {
+        const randomIndex = randNumRange(0, 100)
+        // think of await as a dear JS IOU a response, it isnt instant so dont move on until we have a proper result
+        const response = await fetch(
+          `https://rickandmortyapi.com/api/character/${randomIndex}`
+        )
+
+        const result = await response.json()
+        const message = `${result.name} is a ${result.species} from ${result.origin.name}, and they are ${result.status}`
+        console.log(message)
+      }
+
+      logApiResults()
+
+      // THURSDAY TEASER CODE
+      // HINT: How me might need to wait for a response before building HTML elements based on our result
+
+      const myApiResult = {}
+      logApiResults()
+        .then((data) => {
+          myApiResult.data = data
+          console.log(myApiResult.data)
+          // this is where we would generate HTML elements/use our result from the API to display info to the user
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+    </script>
+  </head>
+  <body></body>
+</html>

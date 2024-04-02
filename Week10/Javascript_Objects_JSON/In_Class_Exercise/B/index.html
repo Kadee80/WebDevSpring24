@@ -7,7 +7,7 @@
     <script type="text/javascript">
       // initialize a new object and store it as a variable named customer
       const customer = {
-        name: 'Anthony',
+        name: 'Tony',
         age: 23,
         married: false,
         pets: ['dog', 'cat', 'iguana'],
@@ -16,6 +16,54 @@
           {name: 'Billy', age: 16, married: false},
         ],
       }
+
+      const customerJSON = JSON.stringify(customer) // makes a JS object into JSON
+      console.log(customerJSON)
+
+      const customerObject = JSON.parse(customerJSON) // makes JSON into a JS object
+      console.log(customerObject)
+
+      // console.log(customer.name)
+      // // reassign the value for the name property
+      // customer.name = 'Anthony'
+      // console.log(customer.name)
+      // customer.eyeColor = ['green', 'blue', 'brown']
+
+      // customer.pets.push('chicken')
+
+      // give mary 2 pets.  spider and a snail
+      // customer.siblings[0].pets = ['spider', 'snail']
+      // console.log(customer)
+      // how would i log how many pets Tony has?
+      // console.log(customer.pets.length)
+
+      async function logApiResults() {
+        // await =  Dear JS, please chill out and wait for this promise to be resolved.
+        // aka dont execute past this line of code until response has a proper value not just an IOU
+        const response = await fetch(
+          'https://rickandmortyapi.com/api/character/5'
+        )
+        // console.log('RESPONSE', response)
+        // this is how MDN does it but .json returns a JS object From the JSON you called it on.\
+        const result = await response.json()
+        // console.log('RESULT', result)
+        return result
+        const message = `${myApiData.name} is a ${myApiData.species} from ${myApiData.origin.name} and he is ${myApiData.status}`
+        // console.log(message)
+      }
+
+      // HINT: How me might need to wait for a response ebfore building HTML elements based on our result
+      const myApiResult = {}
+
+      logApiResults()
+        .then((data) => {
+          myApiResult.data = data
+          console.log(myApiResult.data)
+          // this is where we would generate HTML elements/use our result from the API to display info to the user
+        })
+        .catch((error) => {
+          console.error(error)
+        })
     </script>
   </head>
   <body></body>

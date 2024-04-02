@@ -12,21 +12,45 @@
         married: false,
         pets: ['dog', 'cat', 'iguana'],
         siblings: [
-          {name: 'Mary', age: 32, married: true},
+          {name: 'Mary', age: 32, married: true, pets: ['snail', 'spider']},
           {name: 'Billy', age: 16, married: false},
         ],
       }
 
-      // Modify the customer object:
-      // Change Tony's Name
-      // add a new property defining the customers eyeColor
-      // add the pets and siblings properties to both Mary and Billy
-      // Add an Ton'ys location, be sure to include the fields: houseNumber, street name, town, city
+      // sometimes we need to convert a JS object we built into JSON for sharing
+      // we do this with JSON.stringify()
+      const customerJSON = JSON.stringify(customer)
+      console.log(customerJSON)
 
+      // sometimes we recieve some JSON and need to convert it to an object
+      const customerObject = JSON.parse(customerJSON)
+      console.log(customerObject)
+
+      /*
       // Log the following:
       // Mary's marrital status
+      console.log(customer.siblings[0].married)
+      // customer['siblings'][0]['married']
       // Tony's age
-      // All of Billy's pets
+      console.log(customer.age)
+      // All of Tony's pets
+      for (var i = 0; i < customer.pets.length; i++) {
+        console.log(customer.pets[i])
+      }
+      // Modify the customer object:
+      // Change Tony's Name
+      console.log(customer.name) // Tony
+      customer.name = 'Anthony'
+      console.log(customer.name) // Anthony
+      // add a new property defining the customers eyeColor
+      customer.eyeColor = 'green'
+
+      // add the pets and siblings properties to both Mary and Billy
+      customer.siblings[0].pets = ['snail', 'spider']
+      // Add an Ton'ys location, be sure to include the fields: houseNumber, street name, town, city
+      customer.pets.push('chicken')
+      console.log(customer)
+      */
     </script>
   </head>
   <body></body>
