@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Fetch | Async | Await</title>
+    <!-- Today we are going to hit 2 different API endpoints and dynamically insert HTML -->
+    <!-- Rick and Morty Character Stats, change characer index to select (random) -->
+    <!-- https://rickandmortyapi.com/api/character/1 -->
+    <!-- Random Quote API Endpoint -->
+    <!-- https://quote-garden.onrender.com/api/v3/quotes/random -->
+    <!--
+    We will need to look at adding callback functions when our async functions complete
+    with .then()  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/then
+    -->
+    <!-- We will format our messages using template literals
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+    -->
+    <!-- Write our first arrow function
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+    -->
+    <!-- Desctructuring Objects
+      https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
+    -->
+
+    <script type="text/javascript">
+      // Our handle random number within a range util from week08
+      function randNumRange(min, max) {
+        var rn = Math.round(Math.random() * (max - min) + min)
+        // return a value from our function
+        return rn
+      }
+
+      // flag the function as async, without this we cannot use await within
+      async function logApiResults() {
+        // generate a random number within our know character range
+        const randomIndex = randNumRange(0, 110)
+        // tell JS to pause until this next line resolves
+        // we can use template strings/literals here to insert our random number into the url
+        const response = await fetch(
+          `https://rickandmortyapi.com/api/character/${randomIndex}`
+        )
+        // we also need to tell JS to pause here, since it is dependent on the previous line
+        // forgetting await here will just log a Promise
+        const result = await response.json()
+        // userful methods we have access to at this point:
+        // .json() - returns the result as JSON
+        // .ok = a boolean we can use to check !response.ok means we should throw an erorr or backup message
+        // .blob() - great for fetching an image file
+
+        // More template literals to spit out a human readble sentence
+        const message = `${result.name} is a ${result.species} from ${result.origin.name}, and they are ${result.status}`
+        // console.log(message)
+      }
+
+      //  dont forget to call it!
+      // logApiResults()
+
+      // this function will return the data fetched from the API call so we can pass it to another function amd render HTML on the screen
+      async function fetchCharacterJSON() {
+        // generate a random number for our api call
+        const randomIndex = randNumRange(0, 110)
+
+        // ping our api endpoint with our random index var
+        const response = await fetch(
+          `https://rickandmortyapi.com/api/character/${randomIndex}`
+        )
+        // once we have a response, we can format the response as usable data with .json()
+        const result = await response.json()
+        // console.log(result)
+
+        return result
+      }
+      // something like this wont work, this is becaus its async
+      // const myData = fetchCharacterJSON()
+
+      // let't write our first arrow function!
+      // function renderCharacterInfo(data){}
+
+      const renderCharacterInfo = (data) => {
+        // grab our parent element in html
+        const characterCard = document.getElementById('message')
+        // log our data just to be sure
+        // console.log('RENDER INFO', data.name)
+        // object destructuring! we can extract any propert by its key and store it as a variable
+        const {name, species, origin, status} = data
+        // const name  = data.name, const species = data.species
+
+        const message = `${name} is a ${species} from ${origin.name}, and they are ${status}`
+
+        // add our message to the card element on the page
+        characterCard.append(message)
+      }
+
+      // NEXT make a fancier function to display more HTML elements with out API result
+      // this function will recieve our result data, as a paramter which we can name anything we wish
+      const renderCharacterCard = (result) => {
+        // do some variations on dynamic HTML DOM manipulation
+        // first we need our parent element again which we can grab by ID
+        const parentElement = document.getElementById('card')
+
+        // use template literals as HTML to insert
+        const headShot = `<img src="${result.image}"/>`
+        // use insertAdjacentHTML take 2 params (position, text)
+        parentElement.insertAdjacentHTML('afterbegin', headShot)
+
+        // we can also grab another element on the page and append
+        const title = document.getElementById('characterName')
+        title.append(result.name)
+
+        // another insertAdjacentHTML
+        const charInfo = document.getElementById('charInfo')
+        // write this out in the HTML section first to avoid syntax errors
+        const stats = `
+          <tr><th>Species</th><td>${result.species}</td></tr>
+          <tr><th>Origin</th><td>${result.origin.name}</td></tr>
+          <tr><th>Status</th><td>${result.status}</td></tr>
+        `
+        charInfo.insertAdjacentHTML('beforeend', stats)
+      }
+
+      // pass the result returned from our fetchCharacterJSON function into a callback function using .then()
+      fetchCharacterJSON() // passes result from this function into then as a parameter called data
+        .then((data) => {
+          renderCharacterInfo(data)
+          renderCharacterCard(data)
+        })
+        .catch((error) => {
+          console.error('OOPSIE', error)
+        })
+
+      // We also had a link to a inspiration random quote API lets render some of that stuff
+      // https://quote-garden.onrender.com/api/v3/quotes/random
+      const INSPO_URL = 'https://quote-garden.onrender.com/api/v3/quotes/random'
+      // async function fetchInspo() {} is the same as the arrow function below
+      const fetchInspo = async () => {
+        const response = await fetch(INSPO_URL)
+        const result = await response.json()
+        // all we really care about in this response is the data property, its an array, so we want to grab the first item by index
+        // console.log(result.data[0])
+
+        // destructure again!
+        const {quoteAuthor, quoteText} = result.data[0]
+
+        // return an object with 2 keys which we can destructure in the callback function
+        return {author: quoteAuthor, text: quoteText}
+      }
+
+      fetchInspo().then((data) => {
+        // we know we returned and object with 2 keys, lets destructure here
+        const {author, text} = data
+        // we will need some elements from the page
+        // querySelector - returns the FIRST element on the page that matches that selector
+        // hint: think CSS specificty here
+        document.querySelector('#inspo .fancy').innerHTML = text
+        document.querySelector('#inspo .plain').innerHTML = `- ${author}`
+      })
+    </script>
+    <style type="text/css">
+      /* Some custom fonts from google */
+      @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+      * {
+        box-sizing: border-box;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      #card {
+        width: 25rem;
+        margin: 0 auto;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+        /* from Oribton font documentation */
+        font-family: 'Orbitron', sans-serif;
+      }
+
+      #inspo {
+        font-family: 'Rock Salt', cursive;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      /*Add Table Styles here*/
+      table {
+        width: 100%;
+        text-align: left;
+        /* tables come with a bunch of default styling we usually need to remove */
+        border-collapse: collapse;
+        margin: 1rem 0;
+      }
+
+      tr {
+        border-bottom: 2px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!--  -->
+    <div id="card">
+      <!-- 'afterbegin' position for insertAdjacentHTML -->
+      <h3 id="characterName"></h3>
+      <table id="charInfo"></table>
+      <!-- Add this for first function -->
+      <div id="message"></div>
+      <!-- 'beforeend' -->
+    </div>
+
+    <div id="inspo">
+      <p class="fancy"></p>
+      <p class="plain"></p>
+    </div>
+  </body>
+</html>
