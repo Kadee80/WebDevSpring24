@@ -1,4 +1,4 @@
-# HW Week 10 - Due Tuesday of Week 11 - Final Project Proposals
+# HW Week 11 - Due Tuesday of Week 12 - Final Project Proposals
 
 Next week you will be presenting your final project ideas. based on your proposal, I will let you know if the scope of the project is too big, too small, or just right and what needs to be added or focused on.
 
