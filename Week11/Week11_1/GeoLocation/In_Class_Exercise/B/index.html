@@ -4,6 +4,61 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Geolocation</title>
+    <script type="text/javascript">
+      // declare our location element div globally,
+      // this must be a let because we cannot instantly assign a value
+      let loc
+
+      document.addEventListener('DOMContentLoaded', () => {
+        loc = document.getElementById('location')
+        getLocation()
+      })
+
+      // function getLocation (){}
+      const getLocation = () => {
+        // we need to check if we CAN get the location
+        if (navigator.geolocation && navigator.geolocation.getCurrentPosition) {
+          // we just cheked if geolocation exists,
+          // if true we are going to use it to get our current location
+          // once we have it, it will be passed into a callback function we write
+          navigator.geolocation.getCurrentPosition(setPosition, showError)
+        } else {
+          // we dont have access to geolocation or get current position so we should display
+          // an alternative message to the user
+          alert('Your broswer does not support geolocation.')
+        }
+      }
+      // once we call getCurrentPosition, it passes a position object into setPosition
+      const setPosition = (position) => {
+        console.log(position.coords.latitude)
+        console.log(position.coords.longitude)
+
+        const lat = position.coords.latitude
+        const lon = position.coords.longitude
+
+        loc.innerHTML = `<p>Latitude: ${lat} <br/> Longitude: ${lon}</p>`
+      }
+
+      const showError = (error) => {
+        switch (error.code) {
+          case error.PERMISSION_DENIED:
+            loc.innerHTML = 'User denied the request for geolocation'
+            break
+          case error.POSITION_UNAVAILABLE:
+            loc.innerHTML = 'Location info is unavailable'
+            break
+          case error.TIMEOUT:
+            loc.innerHTML = 'The location request timed out'
+            break
+          case error.UNKNOWN_ERROR:
+            loc.innerHTML = 'An unknown error occured'
+            break
+          default:
+            loc.innerHTML = 'An unknown error occured'
+            break
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="location">
