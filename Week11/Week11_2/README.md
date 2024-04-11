@@ -40,16 +40,14 @@ Bootstrap provides us with a responsive grid layout system. We start with a cont
 Here are some custom styles for the page so we can better see the layout:
 
 ```css
-<style type="text/css">
- /*Give the divs a slight background so we can see them*/
-   div{
-   background:rgba(0, 0, 255, 0.1);
-   }
- /*Add some top margin to the rows for further clarity*/
-   .row{
-   margin-top:20px;
-   }
- </style>
+/*Give the divs a slight background so we can see them*/
+div {
+  background: rgba(0, 0, 255, 0.1);
+}
+/*Add some top margin to the rows for further clarity*/
+.row {
+  margin-top: 20px;
+}
 ```
 
 ### A container div with 2 equal 6-wide columns within:
