@@ -12,8 +12,219 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
     />
     <title>Bootstrap Slider</title>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      .carousel-indicators [data-bs-target] {
+        background-color: transparent;
+        width: 20px;
+        height: 60px;
+        border-radius: 50%;
+        color: yellow;
+        font-size: 60px;
+        text-indent: 0;
+      }
+
+      .carousel-caption {
+        /* background-color: rgba(0, 0, 0, 0.2); */
+      }
+
+      .carousel-caption h5 {
+        text-transform: uppercase;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+
+      .carousel-caption p {
+        font-style: italic;
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="p-0 m-0 border-0">
+    <!-- BOOTSTRAP NAVBAR -->
+    <div class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Nicolas Cage Free Eggs</a>
+        <!-- This is our hidden(on larger screens) hamburger menu -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="#navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNavDropdown"
+        >
+          <ul class="navbar-nav align-self-end px-4">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                Chickens
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Eggs </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"> Ducks </a>
+            </li>
+            <!-- BEGIN DROPDOWN MENU ITEM -->
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                class="nav-link dropdown-toggle"
+                >Breeds</a
+              >
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Amercauna</a></li>
+                <li><a class="dropdown-item" href="#">Mile Fleur</a></li>
+                <li><a class="dropdown-item" href="#">Seabright</a></li>
+                <li><a class="dropdown-item" href="#">Silkie</a></li>
+              </ul>
+            </li>
+            <!-- END DROPDOWN MENU ITEM -->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- END BOOTSTRAP NAVBAR -->
+    <!-- CAROUSEL -->
+    <div
+      id="chickenCarousel"
+      class="carousel slide carousel-fade"
+      data-bs-ride="carousel"
+    >
+      <!-- INDICATORS -->
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+        <button
+          type="button"
+          data-bs-target="#chickenCarousel"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        >
+          <i class="bi-alarm"></i>
+        </button>
+      </div>
+      <!-- END INDICATORS -->
+      <!-- BEGIN IMAGE SLIDES -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="./img/chicken1.jpeg"
+            class="d-block w-100"
+            alt="you should
+          definitely fill this out for each slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Are you sleeping through this?</h5>
+            <p>
+              Sorry, I promise next week we will do more copy paste and less
+              talky talky with the class names.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="./img/chicken2.jpeg"
+            class="d-block w-100"
+            alt="you should
+          definitely fill this out for each slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Another Chicken?</h5>
+            <p>
+              This is just some placeholder text different than the first slide.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="./img/chicken3.jpeg"
+            class="d-block w-100"
+            alt="you should
+          definitely fill this out for each slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Another Chicken 3</h5>
+            <p>
+              This is just some placeholder text different than the first slide.
+            </p>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img
+            src="./img/chicken4.jpeg"
+            class="d-block w-100"
+            alt="you should
+          definitely fill this out for each slide"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Another Chicken 4</h5>
+            <p>
+              This is just some placeholder text different than the first slide.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- END IMAGE SLIDES -->
+      <!-- PREV NEXT BUTTONS -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#chickenCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#chickenCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+
+      <!-- END PREV NEXT BUTTONS -->
+    </div>
+    <!-- END CAROUSEL -->
+  </body>
 </html>
