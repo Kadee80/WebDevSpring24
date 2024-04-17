@@ -1,6 +1,6 @@
-# IMPORTANT ANNOUNCEMENT
+# Class THURSDAY will be held via ZOOM
 
-Due to an impending storm on Wednesday night/Thursday morning class **This Thursday** will be held via Zoom. I will be sending out an email as a reminder as well as a follow up email with the Zoom invites Wednesday.
+Class **This Thursday** will be held via Zoom. I will be sending out an email as a reminder as well as a follow up email with the Zoom invites Wednesday.
 
 ## HW - Begin working on your final project!
 
