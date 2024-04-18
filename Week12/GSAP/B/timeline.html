@@ -2,7 +2,25 @@
 <html>
   <head>
     <title>Simple Timeline</title>
-    <style type="text/css" media="screen"></style>
+    <style type="text/css" media="screen">
+      body {
+        text-align: center;
+      }
+
+      .progress {
+        position: relative;
+        z-index: 5;
+        width: 100%;
+        height: 10px;
+        background-color: black;
+      }
+
+      h2,
+      p {
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+    </style>
   </head>
 
   <body>
@@ -20,6 +38,41 @@
     -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
     <!-- Our Script using GSAP Library Functions -->
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      document.addEventListener('DOMContentLoaded', () => {
+        // grab each element and store them as variables
+        const headers = document.getElementsByTagName('H2')
+        const hello = headers[0]
+        const awesome = headers[1]
+        const text = document.getElementById('description')
+        const progress = document.getElementsByClassName('progress')
+        // querySelector grabs the FIRST element on the page that matches the selector passed in
+        // dont forget the . or # inside the quotes
+        const bg = document.querySelector('#page-wrap')
+
+        // make a timeline to store our animations
+        const tl = new TimelineLite()
+
+        // now we add our different animations to the timeline
+        tl.from(bg, 0.5, {opacity: 0})
+          .from(hello, 0.5, {
+            left: -500,
+            opacity: 0,
+          })
+          .from(awesome, 0.5, {right: -1000, opacity: 0})
+          .from(text, 1.0, {bottom: -1000, opacity: 0})
+          .from(
+            progress,
+            tl.duration(),
+            {
+              scaleX: 0,
+              transformOrigin: 'left',
+              ease: Linear.easeNone,
+            },
+            0
+          )
+          .to(progress, 0.2, {opacity: 0, top: -10})
+      })
+    </script>
   </body>
 </html>

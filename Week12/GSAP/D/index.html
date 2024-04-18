@@ -5,7 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello GSAP Tweens</title>
 
-    <style type="text/css" media="screen"></style>
+    <style type="text/css" media="screen">
+      #sb {
+        position: absolute;
+        top: 500px;
+        left: 0;
+      }
+    </style>
   </head>
   <body>
     <img src="./img/soccer-ball.png" id="sb" />
@@ -23,6 +29,44 @@
     -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <!-- Our Script using GSAP Library Functions -->
-    <script type="text/javascript"></script>
+    <script type="text/javascript">
+      // grab the soccer ball as var so we can "kick it"
+      const sb = document.getElementById('sb')
+      // another way to do this
+      // const sb = document.querySelector('#sb')
+
+      // our arguments are
+      // what we want to animate, how long we want it to take, and then the options object
+      gsap.to(sb, 2, {
+        x: 800,
+        y: -500,
+        rotation: 720,
+        scale: 0.5,
+        delay: 0.5,
+        ease: 'elastic.out',
+      })
+
+      gsap.to('.bball', 1, {
+        y: 500,
+        rotation: 360,
+        delay: 2,
+        ease: 'bounce.out',
+        stagger: {
+          each: 0.5,
+        },
+      })
+      // because we used const here, we HAVE to initialize this funciton before we try to call it, it is not hoisted like the function keyword
+      const imDone = () => {
+        alert("I'm done!!!")
+      }
+
+      // onComplete fires a callback function when the animation completes
+      // function imDone() {}
+      gsap.to('#sb, .bball', 5, {
+        opacity: 0,
+        delay: 10,
+        onComplete: imDone,
+      })
+    </script>
   </body>
 </html>
