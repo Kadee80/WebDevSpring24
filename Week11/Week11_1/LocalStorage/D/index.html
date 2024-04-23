@@ -6,6 +6,44 @@
     <title>Local Storage</title>
   </head>
   <body>
-    <h1>Hello, World!</h1>
+    <h1>Hello, <span id="user">World</span>!</h1>
+    <form id="userInfo">
+      <label for="firstName">What's yuour name?</label>
+      <input type="text" name="firstName" id="firstName" required />
+      <button type="submit" id="nameBtn">Submit!</button>
+    </form>
+
+    <button id="clearBtn">Clear Current User</button>
+
+    <script>
+      // sets user name based on form
+      const saveUser = () => {
+        const name = document.getElementById('firstName').value
+        console.log(name)
+        localStorage.firstName = name
+      }
+
+      // a function to clear out local storage
+      const clearLocalStorage = () => {
+        // clear local storage
+        localStorage.clear()
+        // refresh the window
+        window.location.reload()
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('nameBtn').addEventListener('click', (e) => {
+          // e.preventDefault()
+          saveUser()
+        })
+
+        if (localStorage.firstName) {
+          document.getElementById('user').innerHTML = localStorage.firstName
+        }
+
+        const btnClear = document.getElementById('clearBtn')
+        btnClear.addEventListener('click', clearLocalStorage)
+      })
+    </script>
   </body>
 </html>
