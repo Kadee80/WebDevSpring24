@@ -18,7 +18,7 @@ You will be presenting your final website projects MAY 2. Your presentation shou
 - Any issues you encountered
 - What you learned in order to accomplish your project
 - Next steps – if you had more time and more tools, what would you do next?
-- Your design and presentation is long part of your grade. I will be looking through your source code on github later this week.
+- I will be looking through your source code on github later this week.
 
 ## Source Code on Github
 
