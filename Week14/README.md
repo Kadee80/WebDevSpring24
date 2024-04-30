@@ -1,0 +1,3 @@
+# Final Presentations Thursday May 2
+
+This Thursday is your Final Presentation date! No pressure, it's just like the Midterm Presentations. Demo your site, explain a snippet of code you taught yourself, and talk about what went wrong and what went right. The due date for final project code is Thursday, May 9. So you have a week to fix up, edit or add to your project. If you make significant changes between May 2 and May 9, please email me about any drastic changes. \_Please remember, this extra week to work on your Final is a gift, not a requirement. If you are happy with the state of your project, there is no need to continue working during Exam Week on it.
